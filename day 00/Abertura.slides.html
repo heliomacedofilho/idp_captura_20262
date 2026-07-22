@@ -6,7 +6,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <title>Abertura slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <!-- General and theme style sheets -->
@@ -69,6 +69,66 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .s1 { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Single */
 .highlight .ss { color: var(--jp-mirror-editor-string-color) } /* Literal.String.Symbol */
 .highlight .il { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Integer.Long */
+  </style>
+<style type="text/css">
+    /* Custom CSS for Jupyter Notebook
+
+   Should go into ~/.jupyter/custom/custom.css
+
+   Only impacts the Jupyter Notebook interface, not VS Code for example
+*/
+
+
+/* Prettify disclosure elements used for hints and solutions
+   - Use same color as cell editor background
+   - Add padding and margin to make it look like a card
+   - Make the summary element bold
+   - Add a marker to the summary element
+*/
+
+details {
+  padding: 5px 10px 5px;
+  margin-bottom: 1em;
+}
+
+details[open]{
+}
+
+body[data-jp-theme-light=true] details {
+  background-color: var(--jp-cell-editor-background);
+}
+
+body[data-jp-theme-light=false] details {
+  background-color: var(--jp-cell-editor-background);
+}
+
+summary {
+  cursor: pointer;
+  display: list-item;
+  font-weight: bold;
+  background-color: var(--jp-cell-editor-background);
+}
+
+summary::marker {
+  font-size: 1em;
+}
+
+details > p {
+  margin-top: 5px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Reference for future use
+*/
+
+body[data-jp-theme-light=true] .jp-InputArea-editor {
+  /* To change code and markdown input cells in light mode */
+}
+
+body[data-jp-theme-light=false] .jp-InputArea-editor {
+  /* To change code and markdown input cells in dark mode */
+}
+
   </style>
 <style type="text/css">
 /*-----------------------------------------------------------------------------
@@ -7446,13 +7506,24 @@ main {
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1043cb59-cbfa-4ffb-8ed6-fdfa9c1a4104">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Programa%C3%A7%C3%A3o-para-Ci%C3%AAncia-de-Dados-IV">Programação para Ciência de Dados IV<a class="anchor-link" href="#Programa%C3%A7%C3%A3o-para-Ci%C3%AAncia-de-Dados-IV">¶</a></h2>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a922e5bf">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Web-Scraping:-T%C3%A9cnicas-Avan%C3%A7adas-de-Captura">Web Scraping: Técnicas Avançadas de Captura<a class="anchor-link" href="#Web-Scraping:-T%C3%A9cnicas-Avan%C3%A7adas-de-Captura">¶</a></h2>
+<h3 id="Raspagem-de-Dados-de-Fontes-da-Internet">Raspagem de Dados de Fontes da Internet<a class="anchor-link" href="#Raspagem-de-Dados-de-Fontes-da-Internet">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7515,7 +7586,7 @@ main {
 <td align="center"><img alt="No description has been provided for this image" src="figs/Helio.png" width="150"/></td>
 </tr>
 <tr align="center">
-<td align="center">DSc., Eng. de Sistemas e Computação, UFRJ<br/>Auditor<br/>Banco Central do Brasil</td>
+<td align="center">DSc., Eng. de Sistemas e Computação, UFRJ<br/>Especialista em Políticas Públicas e Gestão Governamental<br/>Coordenador-Geral de Acompanhamento de Programas<br/>Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome</td>
 </tr>
 </table>
 </div>
@@ -7563,7 +7634,7 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <table align="center">
 <tr>
-<th>Data<td>26 e 28 de agosto, bem como 09 de setembro de 2025</td>
+<th>Data<td>08, 27 e 29 outubro de 2026</td>
 </th></tr>
 <tr>
 <th>Horário<td>19h às 22h15m, com intervalo de 15 min</td>
@@ -7627,9 +7698,9 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <table align="center" width="100%">
 <tr align="center">
-<th align="center">26 de agosto de 2025</th>
-<th align="center">28 de agosto de 2025</th>
-<th align="center">09 de setembro de 2025</th>
+<th align="center">08 de outubro de 2025</th>
+<th align="center">27 de outubro de 2025</th>
+<th align="center">29 de outubro de 2025</th>
 </tr>
 <tr align="center">
 <td align="center">Estruturação de Dados a Capturar</td>
@@ -7709,7 +7780,7 @@ main {
 <table align="center" width="100%">
 <tr align="center">
 <td align="center"><img alt="No description has been provided for this image" src="figs/logo-zoom.svg" width="100"/></td>
-<td align="center"><img alt="No description has been provided for this image" src="https://www.idp.edu.br/wp-content/themes/idp_principal_2020/img/logo-idp-whatsapp.png" width="100"/></td>
+<td align="center"><img alt="No description has been provided for this image" src="https://upload.wikimedia.org/wikipedia/commons/9/98/Logomarca_pequena_IDP.jpg" width="100"/></td>
 </tr>
 <tr align="center">
 <td align="center">Zoom</td>
